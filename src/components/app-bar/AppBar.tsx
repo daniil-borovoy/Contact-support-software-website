@@ -16,7 +16,6 @@ const AppBar: FC = () => {
           ПО поддержки решения контактных задач
         </Typography>
       </Toolbar>
-      <AppBarTabs />
     </AppBarMui>
   );
 };

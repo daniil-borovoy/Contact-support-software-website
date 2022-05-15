@@ -17,21 +17,27 @@ const AppBarTabs = () => {
 
   return (
     <Paper
-      elevation={5}
+      elevation={2}
       sx={({ palette }) => ({
         width: "100%",
         bgcolor: palette.primary.main,
+        position: "sticky",
+        zIndex: 2,
+        borderRadius: 0,
+        top: 0,
+        display: "flex",
+        justifyContent: "center",
       })}
     >
       <Tabs
+        variant="scrollable"
         textColor="secondary"
         indicatorColor="secondary"
         onChange={handleChange}
         value={value}
-        centered
       >
         <AppBarTab label="Литература" href="/" />
-        <AppBarTab label="Статьи" href="/articles" />
+        <AppBarTab label="Статьи и монографии" href="/articles" />
         <AppBarTab label="Методы" href="/methods" />
         <AppBarTab label="Задачи" href="/tasks" />
         <AppBarTab label="Справочники" href="/references" />
