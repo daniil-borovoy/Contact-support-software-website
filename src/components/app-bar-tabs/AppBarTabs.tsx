@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import { Paper, Tabs } from "@mui/material";
 import AppBarTab from "../app-bar-tab/AppBarTab";
+import { useLocation } from "react-router-dom";
+import { getInitialTabState } from "../../utils";
 
 const AppBarTabs = () => {
-  const [value, setValue] = useState<number>(0);
+  const location = useLocation();
+
+  const [value, setValue] = useState<number>(
+    getInitialTabState(location.pathname)
+  );
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
