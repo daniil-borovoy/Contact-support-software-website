@@ -18,7 +18,13 @@ const AppBarTab = (props: AppBarTabProps) => {
   };
 
   return (
-    <Tab label={props.label} onClick={handleGoTo} component="a" {...props} />
+    <Tab
+      sx={({ palette }) => ({ color: palette.text.disabled })}
+      label={props.label}
+      onClick={handleGoTo}
+      component="a"
+      {...props}
+    />
   );
 };
 

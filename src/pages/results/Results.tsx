@@ -5,7 +5,15 @@ const Results = () => {
   return (
     <Box sx={{ width: "100%", minHeight: "100vh" }}>
       <Container sx={{ paddingTop: "15px" }}>
-        <Typography textAlign="center">Результаты</Typography>
+        <Typography
+          fontWeight="bold"
+          variant="h1"
+          fontSize="22px"
+          textAlign="center"
+          mb={5}
+        >
+          Результаты
+        </Typography>
       </Container>
     </Box>
   );
