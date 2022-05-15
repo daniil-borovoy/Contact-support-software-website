@@ -4,7 +4,7 @@ import { Box, Container, Typography } from "@mui/material";
 const Articles = () => {
   return (
     <Box sx={{ width: "100%", minHeight: "100vh" }}>
-      <Container sx={{ paddingTop: "15px" }}>
+      <Container sx={{ padding: "15px" }}>
         <Typography
           fontWeight="bold"
           variant="h1"
@@ -14,7 +14,7 @@ const Articles = () => {
         >
           Статьи и монографии
         </Typography>
-        <Typography>
+        <Typography textAlign="justify">
           Пожарская, Е.Д. Контактные задачи для неоднородного клина и цилиндра /
           Е.Д. Пожарская, Н.Б. Золотов, Д.А. Пожарский, С.А. Трюхан //
           Актуальные проблемы науки и техники. 2021. Материалы Всеросс.
@@ -25,7 +25,10 @@ const Articles = () => {
           Вестник Пермского национального исследовательского политехнического
           университета. Механика. ― 2021. ― № 1. ― С. 63―71.
         </Typography>
-        <a href="https://cyberleninka.ru/article/n/kontaktnye-zadachi-dlya-neodnorodnogo-uprugogo-klina-s-peremennym-koeffitsientom-puassona/viewer">
+        <a
+          target="_blank"
+          href="https://cyberleninka.ru/article/n/kontaktnye-zadachi-dlya-neodnorodnogo-uprugogo-klina-s-peremennym-koeffitsientom-puassona/viewer"
+        >
           https://cyberleninka.ru/article/n/kontaktnye-zadachi-dlya-neodnorodnogo-uprugogo-klina-s-peremennym-koeffitsientom-puassona/viewer
         </a>
       </Container>

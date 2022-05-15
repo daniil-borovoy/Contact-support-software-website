@@ -4,7 +4,7 @@ import { Box, Container, styled, TextField, Typography } from "@mui/material";
 const Tasks = () => {
   return (
     <Box sx={{ width: "100%", minHeight: "100vh" }}>
-      <Container sx={{ padding: "15px 0 50px 0" }}>
+      <Container sx={{ padding: "15px 15px 50px 15px" }}>
         <Typography
           fontWeight="bold"
           variant="h1"
@@ -35,7 +35,6 @@ const Tasks = () => {
             helperText="Введите параметр а"
             label="Параметр а"
           />
-
           <TextField
             defaultValue={0}
             type="number"
@@ -87,6 +86,7 @@ const Tasks = () => {
           display="flex"
           flexWrap="wrap"
           justifyContent="space-around"
+          gap={2}
         >
           <TextField
             defaultValue={0}

@@ -19,11 +19,25 @@ const References = () => {
         <Typography variant="h5">
           Узлы и веса квадратурной формулы Гаусса
         </Typography>
-        <Box display="block" margin="15px auto" component="img" src={Table1} />
+        <Box
+          width="100%"
+          maxWidth={500}
+          display="block"
+          margin="15px auto"
+          component="img"
+          src={Table1}
+        />
         <Typography variant="h5">
           Коэффициент Пуассона и модуль упругости Юнга
         </Typography>
-        <Box display="block" margin="15px auto" component="img" src={Table2} />
+        <Box
+          display="block"
+          width="100%"
+          maxWidth={800}
+          margin="15px auto"
+          component="img"
+          src={Table2}
+        />
         <Typography variant="h5" mb={5}>
           Коэффициент трения
         </Typography>

@@ -5,7 +5,7 @@ import { Box, Container, Typography } from "@mui/material";
 const ListItem: FC<{ title: string; link?: string }> = ({ title, link }) => {
   return (
     <Box component="li" marginBottom={1}>
-      <Typography>{title}</Typography>
+      <Typography textAlign="justify">{title}</Typography>
       {link && (
         <>
           <Typography variant="caption">Ссылка для скачивания: </Typography>
@@ -21,7 +21,7 @@ const ListItem: FC<{ title: string; link?: string }> = ({ title, link }) => {
 const Literature = () => {
   return (
     <Box sx={{ width: "100%", minHeight: "100vh", wordBreak: "break-word" }}>
-      <Container sx={{ padding: "15px 0" }}>
+      <Container sx={{ padding: "15px 30px" }}>
         <Typography
           fontWeight="bold"
           variant="h1"
@@ -31,7 +31,7 @@ const Literature = () => {
         >
           Литература
         </Typography>
-        <Box component="ol">
+        <Box paddingLeft="15px" component="ol">
           {literatureList.map(({ title, link }, i) => (
             <ListItem title={title} link={link} key={i} />
           ))}

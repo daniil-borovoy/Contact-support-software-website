@@ -9,7 +9,7 @@ const Methods = () => {
     <Box sx={{ width: "100%", minHeight: "100vh" }}>
       <Container
         sx={{
-          paddingTop: "15px",
+          padding: "15px",
         }}
       >
         <Typography
@@ -35,10 +35,12 @@ const Methods = () => {
         <Box
           display="block"
           margin="15px auto"
+          width="100%"
+          maxWidth={200}
           component="img"
           src={Equation1}
         />
-        <Typography>
+        <Typography textAlign="justify">
           Интеграл по [a, b] должен быть изменен на интеграл по [-1, 1] перед
           применением правила гауссовой квадратуры. Это изменение интервала
           можно сделать следующим образом:
@@ -46,6 +48,8 @@ const Methods = () => {
         <Box
           display="block"
           margin="15px auto 0 auto"
+          width="100%"
+          maxWidth={400}
           component="img"
           src={Equation2}
         />
