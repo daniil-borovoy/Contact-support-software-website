@@ -30,7 +30,9 @@ const AppBarTabs = () => {
       })}
     >
       <Tabs
+        color="#fff"
         variant="scrollable"
+        scrollButtons="auto"
         textColor="secondary"
         indicatorColor="secondary"
         onChange={handleChange}

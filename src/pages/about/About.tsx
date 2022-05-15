@@ -4,7 +4,7 @@ import { Box, Container, Typography } from "@mui/material";
 const About = () => {
   return (
     <Box sx={{ width: "100%", minHeight: "100vh" }}>
-      <Container sx={{ paddingTop: "15px" }}>
+      <Container sx={{ padding: "15px", wordBreak: "break-word" }}>
         <Typography
           fontWeight="bold"
           variant="h1"
@@ -17,13 +17,13 @@ const About = () => {
         <Typography variant="h5">Пожарская Елизавета Дмитриевна</Typography>
         <Typography variant="h6">Cтудент группы МИН21</Typography>
         <Typography variant="subtitle1">
-          Почта -{" "}
+          Почта:{" "}
           <a href="mailto:pozharskaya.elizaveta@gmail.com">
             pozharskaya.elizaveta@gmail.com
           </a>
         </Typography>
         <Typography variant="subtitle1">
-          Телефон - <a href="tel:89185131879">89185131879</a>
+          Телефон: <a href="tel:89185131879">89185131879</a>
         </Typography>
       </Container>
     </Box>
