@@ -5,8 +5,8 @@ import ListItem from "../../components/list-item/ListItem";
 
 const Articles = () => {
   return (
-    <Box sx={{ width: "100%", minHeight: "100vh" }}>
-      <Container sx={{ padding: "15px" }}>
+    <Box sx={{ width: "100%", minHeight: "100vh", wordBreak: "break-word" }}>
+      <Container sx={{ padding: "15px 30px" }}>
         <Typography
           fontWeight="bold"
           variant="h1"
