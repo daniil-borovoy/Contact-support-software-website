@@ -1,22 +1,7 @@
-import React, { FC } from "react";
+import React from "react";
 import literatureList from "../../data/literature_list.json";
 import { Box, Container, Typography } from "@mui/material";
-
-const ListItem: FC<{ title: string; link?: string }> = ({ title, link }) => {
-  return (
-    <Box component="li" marginBottom={1}>
-      <Typography textAlign="justify">{title}</Typography>
-      {link && (
-        <>
-          <Typography variant="caption">Ссылка для скачивания: </Typography>
-          <a target="_blank" href={link}>
-            {link}
-          </a>
-        </>
-      )}
-    </Box>
-  );
-};
+import ListItem from "../../components/list-item/ListItem";
 
 const Literature = () => {
   return (
