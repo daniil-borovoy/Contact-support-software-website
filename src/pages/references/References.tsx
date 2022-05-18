@@ -1,7 +1,15 @@
 import React from "react";
-import { Box, Container, Typography } from "@mui/material";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Box,
+  Container,
+  Typography,
+} from "@mui/material";
 import Table1 from "./img/table_1.png";
 import Table2 from "./img/table_2.png";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const References = () => {
   return (
@@ -16,31 +24,48 @@ const References = () => {
         >
           Справочники
         </Typography>
-        <Typography variant="h5">
-          Узлы и веса квадратурной формулы Гаусса
-        </Typography>
-        <Box
-          width="100%"
-          maxWidth={500}
-          display="block"
-          margin="15px auto"
-          component="img"
-          src={Table1}
-        />
-        <Typography variant="h5">
-          Коэффициент Пуассона и модуль упругости Юнга
-        </Typography>
-        <Box
-          display="block"
-          width="100%"
-          maxWidth={800}
-          margin="15px auto"
-          component="img"
-          src={Table2}
-        />
-        <Typography variant="h5" mb={5}>
-          Коэффициент трения
-        </Typography>
+        <Accordion>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography fontWeight="bold" variant="h5">
+              Узлы и веса квадратурной формулы Гаусса
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Box
+              width="100%"
+              maxWidth={500}
+              display="block"
+              margin="15px auto"
+              component="img"
+              src={Table1}
+            />
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography fontWeight="bold" variant="h5">
+              Коэффициент Пуассона и модуль упругости Юнга
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Box
+              display="block"
+              width="100%"
+              maxWidth={800}
+              margin="15px auto"
+              component="img"
+              src={Table2}
+            />
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography fontWeight="bold" variant="h5">
+              Коэффициент трения
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails></AccordionDetails>
+        </Accordion>
       </Container>
     </Box>
   );
