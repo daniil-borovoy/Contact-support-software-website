@@ -1,0 +1,41 @@
+C Решение СЛАУ методом Гаусса, матрица n*n
+C l-число уравнений (l=1,...,n), l1=n+1
+C a1(l,l1)-матрица системы ,a1(l,n+1),l=1,...,n –свободные члены, z(l)-результат.
+ SUBROUTINE GAUSS(l,l1,a1,z)
+ INTEGER*2 l,l1,n,j,i,k,m,j1,j2,i1,i2,i3,k1
+ REAL*8 a1[huge](l,l1),z(l),temp
+ n=0
+ j=l+1
+ 1 n=n+1
+ DO 2 k=n,l
+ IF (a1(k,n)) 3,2,3
+ 2 CONTINUE
+ WRITE (6,4)
+ 4 FORMAT (10HNOT SYSTEM)
+ STOP
+ 3 IF (k-n) 6,7,6
+ 6 DO 8 m=n,j
+ temp=a1(n,m)
+ a1(n,m)=a1(k,m)
+ 8 a1(k,m)=temp
+ 7 DO 9 j1=n,j
+090402.2034482.000 МИН21 74
+ j2=j+n-j1
+ 9 a1(n,j2)=a1(n,j2)/a1(n,n)
+ IF (n .EQ. l) GO TO 11
+ i1=k+1
+ i2=n+1
+ DO 10 i=i1,l
+ DO 10 j1=i2,j
+ 10 a1(i,j1)=a1(i,j1)-a1(i,n)*a1(n,j1)
+ GO TO 1
+ 11 DO 12 i1=1,l
+ i=l+1-i1
+ z(i)=a1(i,j)
+ i3=i-1
+ IF (i3 .EQ. 0) GO TO 13
+ DO 12 k1=1,i3
+ k=i3-k1+1
+ 12 a1(k,j)=a1(k,j)-a1(k,i)*z(i)
+ 13 RETURN
+ END

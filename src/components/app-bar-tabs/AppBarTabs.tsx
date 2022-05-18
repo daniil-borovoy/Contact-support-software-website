@@ -43,7 +43,6 @@ const AppBarTabs = () => {
         <AppBarTab label="Методы" href="/methods" />
         <AppBarTab label="Задачи" href="/tasks" />
         <AppBarTab label="Справочники" href="/references" />
-        <AppBarTab label="Результаты" href="/results" />
         <AppBarTab label="Об авторе" href="/about" />
       </Tabs>
     </Paper>
