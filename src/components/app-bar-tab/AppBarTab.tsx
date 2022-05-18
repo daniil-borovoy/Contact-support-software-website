@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import { Tab } from "@mui/material";
 
@@ -7,7 +7,7 @@ interface AppBarTabProps {
   href?: string;
 }
 
-const AppBarTab = (props: AppBarTabProps) => {
+const AppBarTab: FC<AppBarTabProps> = (props) => {
   const navigate = useNavigate();
 
   const handleGoTo = (

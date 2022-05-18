@@ -1,9 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import literatureList from "../../data/literature_list.json";
 import { Box, Container, Typography } from "@mui/material";
 import ListItem from "../../components/list-item/ListItem";
 
-const Literature = () => {
+const Literature: FC = () => {
   return (
     <Box sx={{ width: "100%", minHeight: "100vh", wordBreak: "break-word" }}>
       <Container sx={{ padding: "15px 30px" }}>

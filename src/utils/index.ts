@@ -10,10 +10,8 @@ export const getInitialTabState = (pathname: string) => {
       return 3;
     case "/references":
       return 4;
-    case "/results":
-      return 5;
     case "/about":
-      return 6;
+      return 5;
     default:
       return 0;
   }

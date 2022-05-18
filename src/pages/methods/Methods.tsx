@@ -1,8 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import Equation1 from "./img/equation_1.png";
 import Equation2 from "./img/equation_2.png";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
 import {
   Accordion,
   AccordionDetails,
@@ -12,7 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 
-const Methods = () => {
+const Methods: FC = () => {
   return (
     <Box sx={{ width: "100%", minHeight: "100vh" }}>
       <Container

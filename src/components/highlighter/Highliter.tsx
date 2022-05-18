@@ -1,7 +1,7 @@
 import React, { FC } from "react";
+import { Box, Paper } from "@mui/material";
 import hljs from "highlight.js/lib/core";
 import fortran from "highlight.js/lib/languages/fortran";
-import { Box, Paper } from "@mui/material";
 hljs.registerLanguage("fortran", fortran);
 
 const Highlighter: FC<{ content: string }> = ({ content }) => {

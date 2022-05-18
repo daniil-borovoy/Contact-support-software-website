@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   Accordion,
   AccordionDetails,
@@ -11,7 +11,7 @@ import Table1 from "./img/table_1.png";
 import Table2 from "./img/table_2.png";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const References = () => {
+const References: FC = () => {
   return (
     <Box sx={{ width: "100%", minHeight: "100vh" }}>
       <Container sx={{ paddingTop: "15px" }}>
