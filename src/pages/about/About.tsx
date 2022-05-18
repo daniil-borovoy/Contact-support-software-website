@@ -1,7 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import { Box, Container, Typography } from "@mui/material";
 
-const About = () => {
+const About: FC = () => {
   return (
     <Box sx={{ width: "100%", minHeight: "100vh" }}>
       <Container sx={{ padding: "15px", wordBreak: "break-word" }}>

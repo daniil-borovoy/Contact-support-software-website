@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import { Paper, Tabs } from "@mui/material";
 import AppBarTab from "../app-bar-tab/AppBarTab";
 import { useLocation } from "react-router-dom";
 import { getInitialTabState } from "../../utils";
 
-const AppBarTabs = () => {
+const AppBarTabs: FC = () => {
   const location = useLocation();
 
   const [value, setValue] = useState<number>(
@@ -18,6 +18,7 @@ const AppBarTabs = () => {
   return (
     <Paper
       elevation={2}
+      component="nav"
       sx={({ palette }) => ({
         width: "100%",
         bgcolor: palette.primary.main,

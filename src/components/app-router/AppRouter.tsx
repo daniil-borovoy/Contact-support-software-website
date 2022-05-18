@@ -7,7 +7,6 @@ import Methods from "../../pages/methods/Methods";
 import Tasks from "../../pages/tasks/Tasks";
 import References from "../../pages/references/References";
 import About from "../../pages/about/About";
-import AppBarTabs from "../app-bar-tabs/AppBarTabs";
 import { ScrollToTop } from "../../providers/ScrollToTop";
 
 const AppRouter: FC = () => {
@@ -15,7 +14,6 @@ const AppRouter: FC = () => {
     <BrowserRouter>
       <ScrollToTop>
         <AppBar />
-        <AppBarTabs />
         <Routes>
           <Route path="/" element={<Literature />} />
           <Route path="/articles" element={<Articles />} />

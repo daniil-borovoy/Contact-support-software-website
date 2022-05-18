@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC, useEffect, useState } from "react";
 import {
   Accordion,
   AccordionDetails,
@@ -11,9 +11,20 @@ import {
 import DownloadIcon from "@mui/icons-material/Download";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Highlighter from "../../components/highlighter/Highliter";
-import GaussMethod from "../../../public/Gauss_linear_system_Fortran.txtlol?raw";
 
-const Tasks = () => {
+const Tasks: FC = () => {
+  const [programText, setProgrammText] = useState<string>("");
+
+  useEffect(() => {
+    fetch("/programs/Gauss_linear_system_Fortran.txtlol")
+      .then((response) => {
+        return response.text();
+      })
+      .then((program) => {
+        setProgrammText(program);
+      });
+  });
+
   return (
     <Box sx={{ width: "100%", minHeight: "100vh" }}>
       <Container sx={{ padding: "15px 15px 50px 15px" }}>
@@ -39,12 +50,12 @@ const Tasks = () => {
               alignItems="center"
               padding={2}
             >
-              <Highlighter content={GaussMethod} />
+              <Highlighter content={programText} />
               <Button
                 variant="contained"
                 endIcon={<DownloadIcon />}
                 sx={{ alignSelf: "flex-end", fontWeight: "bold" }}
-                href="/Gauss_linear_system_Fortran.txtlol"
+                href="/programs/Gauss_linear_system_Fortran.txtlol"
                 download
               >
                 Скачать текст программы

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
+import articlesList from "../../data/articles_and_monographs_list.json";
 import { Box, Container, Typography } from "@mui/material";
-import literatureList from "../../data/articles_and_monographs_list.json";
 import ListItem from "../../components/list-item/ListItem";
 
-const Articles = () => {
+const Articles: FC = () => {
   return (
     <Box sx={{ width: "100%", minHeight: "100vh", wordBreak: "break-word" }}>
       <Container sx={{ padding: "15px 30px" }}>
@@ -17,7 +17,7 @@ const Articles = () => {
           Статьи и монографии
         </Typography>
         <Box paddingLeft="15px" component="ol">
-          {literatureList.map(({ title, link }, i) => (
+          {articlesList.map(({ title, link }, i) => (
             <ListItem title={title} link={link} key={i} />
           ))}
         </Box>
