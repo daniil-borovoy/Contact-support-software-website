@@ -13,17 +13,13 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Highlighter from "../../components/highlighter/Highliter";
 
 const Tasks: FC = () => {
-  const [programText, setProgrammText] = useState<string>("");
+  const [programText, setProgramText] = useState<string>("");
 
   useEffect(() => {
     fetch("/programs/Gauss_linear_system_Fortran.txtlol")
-      .then((response) => {
-        return response.text();
-      })
-      .then((program) => {
-        setProgrammText(program);
-      });
-  });
+      .then((response) => response.text())
+      .then((program) => setProgramText(program));
+  }, []);
 
   return (
     <Box sx={{ width: "100%", minHeight: "100vh" }}>
